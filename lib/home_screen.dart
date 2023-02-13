@@ -12,7 +12,12 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Center(
-            child: TextButton(onPressed: () {}, child: const Text('next page')),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, AppRoute.slideTansition(const PageTwo()));
+                },
+                child: const Text('next page')),
           ),
         ],
       ),
